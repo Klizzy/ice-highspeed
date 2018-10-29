@@ -2,6 +2,7 @@
 
 This script can reset the 200MB data limit for the highspeed internet on ICE trains in Germany.
 It basically just changes the MAC address for your machine, so you will need admin rights to run this script.
+
 Keep in mind, that your old mac address will still be shown in your network settings. 
 
 **It only works on MacOS / Linux!**
@@ -25,8 +26,6 @@ sh fullspeed.sh
 5. open login.wifionice.de in a new browser window to see that you have 200MB highspeed internet again
 
 If you can't reset your data limit with the steps above, try this one:
-
-Additionally you could try this approach:
 
 1. disconnect from the ICE wifi manually
 2. run the script
