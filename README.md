@@ -7,7 +7,7 @@ Keep in mind, that your old MAC address will still be shown in your network sett
 
 **It only works on MacOS / Linux!**
 
-Demo: https://streamable.com/wnj4f
+Demo video: https://vimeo.com/621098282
 
 ## Usage
 
