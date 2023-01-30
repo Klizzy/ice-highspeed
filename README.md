@@ -5,9 +5,18 @@ It basically just changes the MAC address for your machine, so you will need adm
 
 Keep in mind, that your old MAC address will still be shown in your network settings. 
 
-**It only works on MacOS / Linux!**
+**It was only tested on MacOS / Linux!**
 
-Demo video: https://vimeo.com/621098282
+### DE
+
+Dieses Skript kann das 200MB-Datenlimit / Datenvolumen für das Highspeed-Internet in ICE-Zügen in Deutschland zurücksetzen. Es ändert im Grunde nur die MAC-Adresse des Rechners, deswegen werden Administratorrechte benötigt, um dieses Skript auszuführen.
+
+Bitte beachten, dass selbst nach der Ausführung des Scripts die alte MAC-Adresse weiterhin in den Netzwerkeinstellungen angezeigt wird.
+
+**Es wurde nur unter MacOS / Linux getestet!**
+
+## Demo video 
+- https://vimeo.com/621098282
 
 ## Usage
 
