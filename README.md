@@ -1,4 +1,4 @@
-# ICE highspeed Internet restore
+# 🚅 ICE highspeed internet data limit reset
 
 This script can reset the 200MB data limit for the highspeed internet on ICE trains in Germany.
 It basically just changes the MAC address for your machine, so you will need admin rights to run this script.
@@ -20,16 +20,28 @@ Bitte beachten, dass selbst nach der Ausführung des Scripts die alte MAC-Adress
 Zeige deinen Support, indem du diesem Projekt ein :star: auf GitHub gibst.
 
 ## Demo video 
-- https://vimeo.com/621098282
+- <a href="https://vimeo.com/621098282" target="_blank">Showcase - how to reset the 200MB data limit</a>
 
 ## Usage
+
+> Keep in mind, that admin rights are needed to execute this script!
+
+### Quick execution
+If you want to reset the data limit as fast as possible, you can also execute this script directly within your terminal.
+
+```sh
+sh -c "$(curl -sL https://raw.githubusercontent.com/Klizzy/ice-highspeed/master/fullspeed.sh)"
+```
+> You can now continue with step number `3`
+
+### Saving and executing the script locally
 
 1. open terminal and clone the repo
 ```
 git clone https://github.com/Klizzy/ice-highspeed.git .
 ```
 
-2. run the script (admin password will be needed)
+2. run the script
 ```
 sh fullspeed.sh
 ```
