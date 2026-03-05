@@ -1,58 +1,77 @@
-# 🚅 ICE highspeed internet data limit reset
+# ICE highspeed internet data limit reset
 
-This script can reset the 200MB data limit for the highspeed internet on ICE trains in Germany.
-It basically just changes the MAC address for your machine, so you will need admin rights to run this script.
+This script resets the 200MB data limit for the highspeed internet on ICE trains in Germany.
+It works by changing the MAC address of your network interface, so you will need admin/root rights to run it.
 
-Keep in mind, that your old MAC address will still be shown in your network settings. 
+Keep in mind that your old MAC address will still be shown in your network settings.
 
-**It was only tested on MacOS / Linux!**
+**Tested on macOS and Linux.**
 
-If you like this script, consider to give this project a :star: on GitHub to show support.
+If you like this script, consider giving this project a :star: on GitHub.
 
 ### DE
 
-Dieses Skript kann das 200MB-Datenlimit / Datenvolumen für das Highspeed-Internet in ICE-Zügen in Deutschland zurücksetzen. Es ändert im Grunde nur die MAC-Adresse des Rechners, deswegen werden Administratorrechte benötigt, um dieses Skript auszuführen.
+Dieses Skript kann das 200MB-Datenlimit / Datenvolumen fuer das Highspeed-Internet in ICE-Zuegen in Deutschland zuruecksetzen. Es aendert im Grunde nur die MAC-Adresse des Rechners, deswegen werden Administratorrechte benoetigt, um dieses Skript auszufuehren.
 
-Bitte beachten, dass selbst nach der Ausführung des Scripts die alte MAC-Adresse weiterhin in den Netzwerkeinstellungen angezeigt wird.
+Bitte beachten, dass selbst nach der Ausfuehrung des Scripts die alte MAC-Adresse weiterhin in den Netzwerkeinstellungen angezeigt wird.
 
-**Es wurde nur unter MacOS / Linux getestet!**
+**Es wurde unter macOS und Linux getestet.**
 
 Zeige deinen Support, indem du diesem Projekt ein :star: auf GitHub gibst.
 
-## Demo video 
+## Demo video
 - <a href="https://vimeo.com/621098282" target="_blank">Showcase - how to reset the 200MB data limit</a>
 
 ## Usage
 
-> Keep in mind, that admin rights are needed to execute this script!
+> Admin/root rights are required to execute this script.
 
 ### Quick execution
-If you want to reset the data limit as fast as possible, you can also execute this script directly within your terminal.
+
+Run the script directly from your terminal — no need to clone the repo:
 
 ```sh
-sh -c "$(curl -sL https://raw.githubusercontent.com/Klizzy/ice-highspeed/master/fullspeed.sh)"
+curl -sL https://raw.githubusercontent.com/Klizzy/ice-highspeed/master/fullspeed.sh | sudo sh
 ```
-> You can now continue with step number `3`
+
+You can also pass a specific network interface:
+
+```sh
+curl -sL https://raw.githubusercontent.com/Klizzy/ice-highspeed/master/fullspeed.sh | sudo sh -s -- wlan0
+```
+
+> Continue with step `3` below.
 
 ### Saving and executing the script locally
 
-1. open terminal and clone the repo
-```
-git clone https://github.com/Klizzy/ice-highspeed.git .
-```
-
-2. run the script
-```
-sh fullspeed.sh
+1. Open a terminal and clone the repo:
+```sh
+git clone https://github.com/Klizzy/ice-highspeed.git
+cd ice-highspeed
 ```
 
-3. wait for the wifi to reconnect
-4. confirm the new connection to the ICE wifi
-5. open login.wifionice.de in a new browser window to see that you have 200MB highspeed internet again
+2. Run the script (the interface is auto-detected, or pass it manually):
+```sh
+sudo sh fullspeed.sh
+# or with a specific interface:
+sudo sh fullspeed.sh wlan0
+```
 
-If you can't reset your data limit with the steps above, try this one:
+3. Wait for the WiFi to reconnect
+4. Confirm the new connection to the ICE WiFi
+5. Open login.wifionice.de in a new browser window to see your refreshed 200MB quota
 
-1. disconnect from the ICE wifi manually
-2. run the script
-3. disable and enable wifi
-4. connect to ICE wifi
+### Troubleshooting
+
+If you can't reset your data limit with the steps above:
+
+1. Disconnect from the ICE WiFi manually
+2. Run the script
+3. Disable and re-enable WiFi
+4. Reconnect to the ICE WiFi
+
+### Help
+
+```sh
+sh fullspeed.sh --help
+```
